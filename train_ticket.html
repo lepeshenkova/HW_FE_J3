@@ -12,10 +12,11 @@
     <script>
     const ticket = prompt(`What is your tickets number?`);
     const ticketNum = Number(ticket);
-    if (ticketNum % 2 == 0 && ticketNum < 36) alert(`Верхнее купе`); 
-    if (ticketNum % 2 != 0 && ticketNum < 36) alert(`Нижнее купе`); 
-    if (ticketNum % 2 == 0 && ticketNum > 37) alert(`Верхнее боковое`); 
-    if (ticketNum % 2 != 0 && ticketNum > 37) alert(`Нижнее боковое`); 
+    const coupe = Math.ceil(ticketNum/4);
+    if (ticketNum % 2 == 0 && ticketNum < 36) alert(`Верхнее не боковое, купе №` + coupe); 
+    if (ticketNum % 2 != 0 && ticketNum < 36) alert(`Нижнее не боковое, купе №` + coupe); 
+    if (ticketNum % 2 == 0 && ticketNum > 37) alert(`Верхнее боковое, купе №` + coupe); 
+    if (ticketNum % 2 != 0 && ticketNum > 37) alert(`Нижнее боковое, купе №` + coupe); 
     </script>
 </body >
 </html >
